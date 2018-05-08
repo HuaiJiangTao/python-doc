@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>python 基础 与 JavaScript差异 – 20180504前端槐江涛</title>
+    <meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+    <meta name="author" content="Hakim El Hattab">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/custom/index.css">
+    <link rel="stylesheet" href="css/theme/moon.css" id="theme">
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <!-- Printing and PDF exports -->
+    <script>
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = window.location.search.match(/print-pdf/gi) ? 'css/print/pdf.css' : 'css/print/paper.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        <!-- Any section element inside of this container is displayed as a slide -->
+        <div class="slides">
+        	<section>
+        		<section>
+            	    <h1>python基础</h1>
+            	    <p class="tl">基本数据类型，基本语法</p>
+            	    <p class="tl">数组和其他集合类的使用:list,tuple,set,dict</p>
+            	    <p class="tl">基本面向对象或者函数式编程的特征</p>
+            	</section>
+            	<section>
+            	    <h1>python基础</h1>
+            	    <p class="tl">异常、错误处理、断言、日志和调试支持</p>
+            	    <p class="tl">基本输入输出和文件处理，输入输出流类的组织</p>
+            	</section>
+        	</section>
+            <section>
+                <h6>python 和 JS 数据类型的差异</h1>
+                <p class="tl">python数据类型：数字（整数、浮点数），字符串，布尔值，空值，列表，元组，集合，字典</p>
+                <p class="tl">JS数据类型：字符串、数字、布尔、数组、对象、Null、Undefined</p>
+            </section>
+            <!-- Example of nested vertical slides -->
+            <section>
+                <section>
+                    <h6>python 数据类型的转换</h6>
+                    <img src="./img/pythontransform.jpg" alt="" style="display: block;height: 80%;margin: 0 auto">
+                </section>
+                <section>
+                    <h6>JS 数据类型的转换</h6>
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td>Number(s)</td>
+                                <td>将S转化为数字</td>
+                            </tr>
+                            <tr>
+                                <td>/、-、*、+</td>
+                                <td>将数据转化为字符串（有条件的）</td>
+                            </tr>
+                            <tr>
+                                <td>String(s)</td>
+                                <td>将S转化为字符串</td>
+                            </tr>
+                            <tr>
+                                <td>'' + s</td>
+                                <td>将S转化为字符串</td>
+                            </tr>
+                            <tr>
+                                <td>Boolean(s)</td>
+                                <td>将S转化为布尔值</td>
+                            </tr>
+                            <tr>
+                                <td>!!s</td>
+                                <td>将S转化为布尔值</td>
+                            </tr>
+                            <tr>
+                                <td>'' + s</td>
+                                <td>将S转化为字符串</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </section>
+            <section>
+                <h3>python 和 JS 调试的差别</h3>
+                <p class="tl">python调试方式：断言assert，loggin，pdb，pdb.set_trace()，IDE</p>
+                <p class="tl">JS常用调试方式：console，alert，debugger，开发者工具</p>
+            </section>
+            <section>
+                <h6>python调试方式</h6>
+                <table class="font28">
+                    <tbody>
+                        <tr>
+                            <td>
+                                assert 表达式，错误信息
+                            </td>
+                            <td>
+                                表达式为false抛出AssertionError错误
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                loggin
+                            </td>
+                            <td>
+                                debug，info，warning，error级别自定义
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                pdb
+                            </td>
+                            <td>
+                                单步方式执行
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                pdb.set_trace()
+                            </td>
+                            <td>
+                                在pdb.set_trace()暂停并进入pdb调试环境
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            <section>
+                <h3>python 和 JS 线程差别</h3>
+                <p>
+                    Python既支持多进程（fork()，multiprocessing，Pool），又支持多线程（_thread和threading）<br>
+                    <a href="http://www.cnblogs.com/whatisfantasy/p/6440585.html" target="_blank">搞定python多线程和多进程</a>
+                </p>
+                <p>
+                    JS单线程<br>
+                    <a href="https://github.com/JChehe/blog/blob/master/posts/%E5%85%B3%E4%BA%8EJavaScript%E5%8D%95%E7%BA%BF%E7%A8%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E4%BA%8B.md" target="_blank">JavaScript单线程</a>
+                </p>
+            </section>
+            <section>
+                <h3>python 和 JS 面向对象编程的差异</h3>
+                <p>
+                    Python面向对象：通过class和实例实现类测继承，可以继承多个超类<br>
+                    <a href="https://bop.mol.uno/14.oop.html" target="_blank">面向对象编程</a>
+                </p>
+                <p>
+                    JS面向对象：通过原型prototype实现，从ES6开始JS也有引入。<a href="https://www.liaoxuefeng.com/wiki/001434446689867b27157e896e74d51a89c25cc8b43bdb3000/001434499763408e24c210985d34edcabbca944b4239e20000" target="_blank">JS面向对象编程</a>
+                </p>
+            </section>
+            <section>
+                <h6>python 和 JS 模块机制的差异</h6>
+                <p class="tl">python模块机制：一个.py文件就称之为一个模块,Python又引入了按目录来组织模块的方法，称为包。<br>
+                <a href="http://hpzhao.com/2016/07/24/Python%E6%A8%A1%E5%9D%97%E4%B8%8E%E5%8C%85/" target="_blank">python模块与包基础介绍</a>
+                </p>
+                <p class="tl">JS模块机制：CommonJS，AMD，CMD，UMD，Browserify<br>
+                <a href="http://reverland.github.io/javascript/2015/05/02/javascript/" target="_blank">JS模块化原理</a>
+                </p>
+            </section>
+        </div>
+    </div>
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+    <script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+            { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+            { src: 'plugin/search/search.js', async: true },
+            { src: 'plugin/zoom-js/zoom.js', async: true },
+            { src: 'plugin/notes/notes.js', async: true }
+        ]
+    });
+    </script>
+</body>
+
+</html>
